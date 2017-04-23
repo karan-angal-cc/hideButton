@@ -10,16 +10,28 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var chocoCake: UIImageView!
+    @IBOutlet weak var showYummyCake: UIButton!
+    @IBOutlet weak var hideYummyCake: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        //chocoCake.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    @IBAction func showImage(_ sender: Any) {
+        chocoCake.isHidden = false
+    }
+    
+    @IBAction func hideImage(_ sender: Any) {
+        chocoCake.isHidden = true
+    }
+    
+    
 }
 
